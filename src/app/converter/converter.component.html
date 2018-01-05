@@ -1,0 +1,16 @@
+<h2>
+  Please type the passcode.
+</h2>
+<div class="inputArea">
+  <label> Passcode:
+    <input #sourceCode class="inputs" (keyup.enter)="convert(sourceCode.value); sourceCode.value=''">
+    <button (click)="convert(sourceCode.value);sourceCode.value=''" class="btn">Submit</button>
+    <button (click)="sourceCode.value='';convertedCode=''" class="btn">Clear</button>
+  </label>
+</div>
+
+<div class="Result">
+  <label> Result:
+  <span class="displayResult">  {{ convertedCode }} </span>
+  </label>
+</div>
